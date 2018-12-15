@@ -13,25 +13,16 @@ let path = {
   drag(evt) {
     var dragCoord = util.getMousePosition(evt);
 
-    // M10,10 C200,10 10,200 200,200
-    // let path = `M${startCoord.x}, ${startCoord.y} C${(startCoord.x + dragCoord.x)/2} 10 10 ${(startCoord.y + dragCoord.y)/2} ${dragCoord.x} ${dragCoord.y}`;
-    //M10 20 Q 50 20, 50 100 T 100 200
-    // let path = `
-    //   M${startCoord.x}, ${startCoord.y}
-    //   Q${(dragCoord.x + startCoord.x)/ 2} ${startCoord.y} ${(dragCoord.x + startCoord.x)/ 2} ${dragCoord.y / 2}
-    //   T ${dragCoord.x} ${dragCoord.y}`;
-
     let path = `
       M${startCoord.x}, ${startCoord.y}
-      H${(startCoord.x + dragCoord.x) / 2 - 10}
-      a10,10 0 0 1 10,10
-      V${dragCoord.y - 10}
-      a10,10 1 0 0 10,10
-      L${dragCoord.x} ${dragCoord.y}`;
+      H${(startCoord.x + dragCoord.x) / 2}`;
 
-    console.log('path - ', path);
+      // a10,10 0 0 1 10,10
+    path += `V${dragCoord.y}`;
+      // a10,10 1 0 0 10,10
+    path += `L${dragCoord.x} ${dragCoord.y}`;
+
     $path.setAttribute('d', path);
-    //$pathcoord.x - offset.x, coord.y - offset.y
   },
 
   end(evt) {
