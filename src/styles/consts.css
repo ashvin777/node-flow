@@ -1,8 +1,14 @@
 :root {
   --input-width: 120px;
+  --left-panel-width: 200px;
 
   --color-orange: rgb(253, 208, 162);
   --color-dark-orange: #ff7f0e;
+
+  --color-blue: #2577ff;
+
   --color-gray: #999;
   --color-light-gray: #ddd;
+  --color-lightest-gray:#f6f6f6;
+  --color-dark-gray:#565656;
 }

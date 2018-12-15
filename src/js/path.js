@@ -1,5 +1,6 @@
 let $path = null;
 let startCoord = null;
+
 let path = {
   start(evt) {
     $path = document.getElementById('link');

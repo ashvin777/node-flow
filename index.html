@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Node RED Graph</title>
-    <link rel="stylesheet" href="src/shapes.css">
-    <link rel="stylesheet" href="src/index.css">
-  </head>
 
-  <body>
-    <!-- <div class="graph-container">
-      <div class="graph" id="graph"></div>
-    </div> -->
+<head>
+  <title>Node flow</title>
+  <link rel="stylesheet" href="src/styles/index.css">
 
-    <svg id="shapes" onload="drag.init(evt)">
+  <script type="text/javascript" src="src/lib/require.js"></script>
+  <script type="text/javascript" src="src/require.js"></script>
+</head>
 
-      <g id="input" class="input draggable">
-        <rect class="box"></rect>
-        <text class="label" x="38" y="20">Injection</text>
-        <rect class="connector right"></rect>
-      </g>
+<body>
 
-      <g id="output" class="output draggable">
-        <rect class="box"></rect>
-        <text class="label" x="38" y="20">Injection</text>
-        <rect class="connector left"></rect>
-      </g>
+  <header>
+    <!-- Node flow -->
+  </header>
 
-      <path id="link"></path>
-    </svg>
+  <div class="graph-container">
 
-    <script type="text/javascript" src="src/util.js"></script>
-    <script type="text/javascript" src="src/draggable.js"></script>
-    <script type="text/javascript" src="src/db.js"></script>
-    <script type="text/javascript" src="src/path.js"></script>
-    <script type="text/javascript" src="src/index.js"></script>
-  </body>
+    <div class="left-panel">
+      <header>INPUTS</header>
+
+      <svg id="input" onload="app.draggable(evt)">
+        <g>
+          <rect class="box"></rect>
+          <text class="label" x="38" y="20">Injection</text>
+          <rect class="connector right"></rect>
+        </g>
+      </svg>
+
+      <header>OUTPUTS</header>
+    </div>
+
+    <div class="right-panel" >
+      <!-- <svg class="graph" id="graph"></svg> -->
+    </div>
+
+  </div>
+
+
+  <!--
+    <g id="output" class="output draggable">
+      <rect class="box"></rect>
+      <text class="label" x="38" y="20">Injection</text>
+      <rect class="connector left"></rect>
+    </g>
+
+    <path id="link"></path>
+  -->
+
+
+
+  <!-- <script type="text/javascript" src="src/js/util.js"></script>
+  <script type="text/javascript" src="src/js/storage.js"></script>
+  <script type="text/javascript" src="src/js/db.js"></script>
+
+  <script type="text/javascript" src="src/js/draggable.js"></script>
+  <script type="text/javascript" src="src/js/path.js"></script>
+  <script type="text/javascript" src="src/js/index.js"></script> -->
+</body>
+
 </html>
