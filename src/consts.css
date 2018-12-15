@@ -1,0 +1,8 @@
+:root {
+  --input-width: 120px;
+
+  --color-orange: rgb(253, 208, 162);
+  --color-dark-orange: #ff7f0e;
+  --color-gray: #999;
+  --color-light-gray: #ddd;
+}

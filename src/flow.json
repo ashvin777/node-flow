@@ -1,0 +1,178 @@
+[{
+  "id": "7a798d9d.aa6ea4",
+  "type": "tab",
+  "label": "Flow 1",
+  "disabled": false,
+  "info": ""
+}, {
+  "id": "20489dc.b931f62",
+  "type": "websocket-listener",
+  "z": "",
+  "path": "/ws/signal",
+  "wholemsg": "false"
+}, {
+  "id": "c3544176.941e7",
+  "type": "websocket-client",
+  "z": "",
+  "path": "ws://127.0.0.1:1880/ws/signal",
+  "wholemsg": "false"
+}, {
+  "id": "186fce8b.06cbe1",
+  "type": "postgresDB",
+  "z": "",
+  "name": "local",
+  "host": "127.0.0.1",
+  "port": "5432",
+  "database": "postgres",
+  "ssl": false,
+  "max": "10",
+  "min": 1,
+  "idle": "1000"
+}, {
+  "id": "d97d5c32.c6497",
+  "type": "twitter-credentials",
+  "z": "",
+  "screen_name": "@AshvinSuthar777"
+}, {
+  "id": "4e9984e9.fc2a0c",
+  "type": "ui_tab",
+  "z": "",
+  "name": "Home",
+  "icon": "dashboard"
+}, {
+  "id": "974f9a18.ea37b8",
+  "type": "ui_group",
+  "z": "",
+  "name": "Default",
+  "tab": "4e9984e9.fc2a0c",
+  "disp": true,
+  "width": "6",
+  "collapse": false
+}, {
+  "id": "fb22a3c9.18095",
+  "type": "ui_base",
+  "theme": {
+    "name": "theme-light",
+    "lightTheme": {
+      "default": "#0094CE",
+      "baseColor": "#0094CE",
+      "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+      "edited": true,
+      "reset": false
+    },
+    "darkTheme": {
+      "default": "#097479",
+      "baseColor": "#097479",
+      "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+      "edited": false
+    },
+    "customTheme": {
+      "name": "Untitled Theme 1",
+      "default": "#4B7930",
+      "baseColor": "#4B7930",
+      "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+    },
+    "themeState": {
+      "base-color": {
+        "default": "#0094CE",
+        "value": "#0094CE",
+        "edited": false
+      },
+      "page-titlebar-backgroundColor": {
+        "value": "#0094CE",
+        "edited": false
+      },
+      "page-backgroundColor": {
+        "value": "#fafafa",
+        "edited": false
+      },
+      "page-sidebar-backgroundColor": {
+        "value": "#ffffff",
+        "edited": false
+      },
+      "group-textColor": {
+        "value": "#1bbfff",
+        "edited": false
+      },
+      "group-borderColor": {
+        "value": "#ffffff",
+        "edited": false
+      },
+      "group-backgroundColor": {
+        "value": "#ffffff",
+        "edited": false
+      },
+      "widget-textColor": {
+        "value": "#111111",
+        "edited": false
+      },
+      "widget-backgroundColor": {
+        "value": "#0094ce",
+        "edited": false
+      },
+      "widget-borderColor": {
+        "value": "#ffffff",
+        "edited": false
+      },
+      "base-font": {
+        "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      }
+    }
+  },
+  "site": {
+    "name": "Node-RED Dashboard",
+    "hideToolbar": "false",
+    "allowSwipe": "false",
+    "dateFormat": "DD/MM/YYYY",
+    "sizes": {
+      "sx": 48,
+      "sy": 48,
+      "gx": 6,
+      "gy": 6,
+      "cx": 6,
+      "cy": 6,
+      "px": 0,
+      "py": 0
+    }
+  }
+}, {
+  "id": "f2e062e0.d8892",
+  "type": "debug",
+  "z": "7a798d9d.aa6ea4",
+  "name": "",
+  "active": true,
+  "console": "false",
+  "complete": "payload",
+  "x": 300.032169342041,
+  "y": 92.59764766693115,
+  "wires": []
+}, {
+  "id": "3d28ba96.e49fc6",
+  "type": "inject",
+  "z": "7a798d9d.aa6ea4",
+  "name": "",
+  "topic": "",
+  "payload": "",
+  "payloadType": "date",
+  "repeat": "",
+  "crontab": "",
+  "once": false,
+  "x": 111.46829986572266,
+  "y": 41.85257148742676,
+  "wires": [
+    ["f2e062e0.d8892"]
+  ]
+}, {
+  "id": "6f1e68dc.f21848",
+  "type": "function",
+  "z": "7a798d9d.aa6ea4",
+  "name": "",
+  "func": "\nreturn msg;",
+  "outputs": 1,
+  "noerr": 0,
+  "x": 120.41566467285156,
+  "y": 89.21351051330566,
+  "wires": [
+    ["f2e062e0.d8892"]
+  ]
+}]

@@ -1,0 +1,53 @@
+svg#shapes {
+  height: 100%;
+  width: 100%;
+}
+
+rect.box {
+  height: 30px;
+  width: var(--input-width);
+  fill: var(--color-orange);
+  stroke: var(--color-gray);
+  rx: 5;
+}
+
+rect.box:active{
+  stroke: var(--color-dark-orange);
+  stroke-width: 2;
+}
+
+text.label {
+  x: 38;
+  y: 14;
+}
+
+rect.connector {
+  height: 10px;
+  width: 10px;
+  fill: var(--color-light-gray);
+  stroke: var(--color-gray);
+  rx: 3;
+  z:100;
+}
+
+rect.connector:hover{
+  cursor: crosshair;
+  fill: var(--color-dark-orange);
+  stroke: var(--color-dark-orange);
+}
+
+rect.connector.right {
+  x: calc(var(--input-width) - 5px);
+  y: 10;
+}
+
+rect.connector.left {
+  x: -5px;
+  y: 10;
+}
+
+path{
+  stroke: var(--color-gray);
+  stroke-width: 3;
+  fill: transparent;
+}
